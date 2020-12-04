@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# every-metro Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Name
 
-## Available Scripts
+Every Metro
 
-In the project directory, you can run:
+[EveryMetroInstagram](https://www.instagram.com/everymetrointheworld/)
 
-### `npm start`
+## Project Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A website for Every Metro in the World that uses the Every Metro Airtable API to display information about any Metro/subway system in the world. Users can see detailed information about specific metro systems and leave reviews or suggestions of things to do in those cities. Users can also track the cities that Every Metro has visited.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Wireframes
 
-### `npm test`
+Wireframes [here](https://www.figma.com/file/FoklhFDGZCxu9jVOKerQdj/Every-Metro-Wireframes)!!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Component Hierarchy
 
-### `npm run build`
+![componentHierarchy](./assets/EveryMetro.png "component hierarchy")
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API and Data Sample
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Using Every Metro Airtable API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This API, as it was created before attending GA, may need some fine tuning so titles will behave better with axios.
 
-### `npm run eject`
+```javascript
+{
+createdTime: "2020-01-23T02:19:17.000Z"
+{
+Annual Ridership in Millions: "n/a"
+City: "Jinan"
+Country: "China"
+Name: "Jinan Metro"
+Region: "Asia"
+Stations as of 01/2020: "23"
+System Length as of 01/2020: "47.7 km (29.6 mi)"
+Year Opened: "2019"
+}
+id: "rec1mRM5ocUOicW1u"
+}
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### MVP/PostMVP
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### MVP
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- makes API call to get list of metros/cities
+- able to search for a specific system
+- users can see detailed information about different metro systems
+- users can leave reviews and suggestions for each metro system
+- conditionally render information if available
+- responsive styling and CSS
 
-## Learn More
+#### PostMVP
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- users can contribute to the data via an input form
+- incorporate visited table from API so users can see previos Every Metro trips
+- incorporate light rail/trams table into all of the above
+- linking between systems and their light rail systems / other systems in the same city
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Schedule
 
-### Code Splitting
+| Day         | Deliverable                                        | Status     |
+| ----------- | -------------------------------------------------- | ---------- |
+| December 3  | Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete |
+| December 4  | Project Approval                                   | Incomplete |
+| December 6  | Core Application Structure (HTML, CSS, etc.)       | Incomplete |
+| December 7  | Pseudocode / actual code                           | Incomplete |
+| December 8  | Initial Clickable Model                            | Incomplete |
+| December 9  | MVP                                                | Incomplete |
+| December 11 | Presentations                                      | Incomplete |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Timeframes
 
-### Analyzing the Bundle Size
+| Component                      | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------------------ | :------: | :------------: | :-----------: | :---------: |
+| Wireframes and Pitch           |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Base React App                 |    H     |      2hrs      |     0hrs      |    0hrs     |
+| Home Page                      |    H     |      2hrs      |     0hrs      |    0hrs     |
+| Home Page Styling              |    H     |      2hrs      |     0hrs      |    0hrs     |
+| Nav                            |    H     |      1hrs      |     0hrs      |    0hrs     |
+| Nav Styling                    |    H     |      1hrs      |     0hrs      |    0hrs     |
+| Search Page                    |    H     |      2hrs      |     0hrs      |    0hrs     |
+| Search Functionality           |    H     |      2hrs      |     0hrs      |    0hrs     |
+| Search Page Styling            |    H     |      2hrs      |     0hrs      |    0hrs     |
+| System Card                    |    H     |      2hrs      |     0hrs      |    0hrs     |
+| System Card Styling            |    H     |      1hrs      |     0hrs      |    0hrs     |
+| System Details Page            |    H     |      3hrs      |     0hrs      |    0hrs     |
+| System Details Styling         |    H     |      2hrs      |     0hrs      |    0hrs     |
+| Reviews Components             |    H     |      2hrs      |     0hrs      |    0hrs     |
+| Reviews Stylings               |    H     |      2hrs      |     0hrs      |    0hrs     |
+| Add A review                   |    H     |      2hrs      |     0hrs      |    0hrs     |
+| Responsive Styling             |    M     |      3hrs      |     0hrs      |    0hrs     |
+| About Page                     |    M     |      1hrs      |     0hrs      |    0hrs     |
+| About Page Styling             |    M     |      1hrs      |     0hrs      |    0hrs     |
+| Tracking Page                  |    L     |      2hrs      |     0hrs      |    0hrs     |
+| Tracking Page Styling          |    L     |      2hrs      |     0hrs      |    0hrs     |
+| Incorporate Light Rail Systems |    L     |      3hrs      |     0hrs      |    0hrs     |
+| Total                          |    H     |     42hrs      |     0hrs      |    0hrs     |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## SWOT Analysis
 
-### Making a Progressive Web App
+### Strengths:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Functionality, dealing with data, and making API calls
 
-### Advanced Configuration
+### Weaknesses:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+CSS and styling
 
-### Deployment
+### Opportunities:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Get to practice CSS
+- Get to make something that I will definitely use in the future
 
-### `npm run build` fails to minify
+### Threats:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Database was not made with this in mind, so may experience some growing pains
+
+## Code Snippet
