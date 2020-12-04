@@ -64,8 +64,8 @@ id: "rec1mRM5ocUOicW1u"
 
 | Day         | Deliverable                                        | Status     |
 | ----------- | -------------------------------------------------- | ---------- |
-| December 3  | Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete |
-| December 4  | Project Approval                                   | Incomplete |
+| December 3  | Prompt / Wireframes / Priority Matrix / Timeframes | Complete   |
+| December 4  | Project Approval                                   | Complete   |
 | December 6  | Core Application Structure (HTML, CSS, etc.)       | Incomplete |
 | December 7  | Pseudocode / actual code                           | Incomplete |
 | December 8  | Initial Clickable Model                            | Incomplete |
