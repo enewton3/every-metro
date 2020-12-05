@@ -11,20 +11,17 @@ function Search() {
   const [searchedCity, setSearchedCity] = useState("");
 
   async function getSystems() {
+    let pageOneURL = `${baseURL}/Metro_Systems`;
     try {
-      let response = await axios.get(`${baseURL}/Metro_Systems?`, config);
+      let response = await axios.get(pageOneURL, config);
       console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   }
 
   async function getSystemsNextPage() {
+    let pageTwoURL = `${baseURL}/Metro_Systems?offset=itrAXkrec00BFlmVc/recVT7e1WNOif7EN0`;
     try {
-      let response = await axios.get(
-        `${baseURL}/Metro_Systems?offset=itrAXkrec00BFlmVc/recVT7e1WNOif7EN0`,
-        config
-      );
+      let response = await axios.get(pageTwoURL, config);
       console.log(response);
     } catch (error) {
       console.log(error);
