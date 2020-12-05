@@ -14,15 +14,14 @@ function Search() {
     let pageOneURL = `${baseURL}/Metro_Systems`;
     try {
       let response = await axios.get(pageOneURL, config);
-      console.log(response);
-    } catch (error) {}
-  }
-
-  async function getSystemsNextPage() {
-    let pageTwoURL = `${baseURL}/Metro_Systems?offset=itrAXkrec00BFlmVc/recVT7e1WNOif7EN0`;
-    try {
-      let response = await axios.get(pageTwoURL, config);
-      console.log(response);
+      let offset = response.data.offset;
+      let pageTwoURL = `${baseURL}/Metro_Systems?offset=${offset}`;
+      let pageTwoResponse = await axios.get(pageTwoURL, config);
+      let pageOne = response.data.records;
+      let pageTwo = pageTwoResponse.data.records;
+      let concattedRecords = [...pageOne, ...pageTwo];
+      console.log(concattedRecords);
+      // setSystems(concattedRecords);
     } catch (error) {
       console.log(error);
     }
@@ -30,7 +29,6 @@ function Search() {
 
   useEffect(() => {
     getSystems();
-    getSystemsNextPage();
   }, []);
 
   function handleSubmit(e) {
