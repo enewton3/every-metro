@@ -1,11 +1,9 @@
-import React, { Component } from "react";
+export default function SystemCard(props) {
+  const { system } = props;
 
-export default class SystemCard extends Component {
-  render() {
-    return (
-      <div>
-        <h1>This is a system Card</h1>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <h1>{system.fields.Name}</h1>
+    </div>
+  );
 }

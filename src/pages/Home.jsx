@@ -11,6 +11,7 @@ export default function Home() {
         <h1>Every Metro in the World</h1>
       </div>
       <h2>Blurb</h2>
+      <p>Some extra info about the website here</p>
     </div>
   );
 }
