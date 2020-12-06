@@ -82,8 +82,8 @@ id: "rec1mRM5ocUOicW1u"
 | Home Page Styling              |    H     |      2hrs      |     .5hrs     |    0hrs     |
 | Nav                            |    H     |      1hrs      |     1hrs      |    0hrs     |
 | Nav Styling                    |    H     |      1hrs      |     1hrs      |    0hrs     |
-| Search Page                    |    H     |      2hrs      |     0hrs      |    0hrs     |
-| Search Functionality           |    H     |      2hrs      |     0hrs      |    0hrs     |
+| Search Page                    |    H     |      2hrs      |     2hrs      |    0hrs     |
+| Search Functionality           |    H     |      2hrs      |     2hrs      |    0hrs     |
 | Search Page Styling            |    H     |      2hrs      |     0hrs      |    0hrs     |
 | System Card                    |    H     |      2hrs      |     0hrs      |    0hrs     |
 | System Card Styling            |    H     |      1hrs      |     0hrs      |    0hrs     |

@@ -1,6 +1,6 @@
 export default function SystemCard(props) {
   const { system } = props;
-
+  console.log(system);
   return (
     <div>
       <h3>{system.fields.Name}</h3>
