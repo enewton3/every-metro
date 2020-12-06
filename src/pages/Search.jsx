@@ -120,8 +120,8 @@ function Search() {
       </div>
 
       <div className="systems">
-        {searchedSystems.map((system) => (
-          <Link to={`/details/${system.id}`}>
+        {searchedSystems.map((system, index) => (
+          <Link key={`${index}`} to={`/details/${system.id}`}>
             <SystemCard system={system} />
           </Link>
         ))}
