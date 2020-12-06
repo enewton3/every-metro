@@ -2,6 +2,7 @@ import axios from "axios";
 import searchimg from "../images/search.jpg";
 import { baseURL, config } from "../services";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import SearchDropdown from "../components/SearchDropdown";
 import SystemCard from "../components/SystemCard";
 import "./Search.css";
@@ -120,7 +121,9 @@ function Search() {
 
       <div className="systems">
         {searchedSystems.map((system) => (
-          <SystemCard system={system} />
+          <Link to={`/details/${system.id}`}>
+            <SystemCard system={system} />
+          </Link>
         ))}
       </div>
     </div>

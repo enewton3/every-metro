@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Search from "./pages/Search";
 import Track from "./pages/Track";
+import SystemDetails from "./pages/SystemDetails";
 
 import "./App.css";
 
@@ -25,7 +26,7 @@ function App() {
           <Search />
         </Route>
         <Route path="/details/:id">
-          <About />
+          <SystemDetails />
         </Route>
       </Switch>
     </div>
