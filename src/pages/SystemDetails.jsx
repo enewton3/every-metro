@@ -16,7 +16,7 @@ export default function SystemDetails() {
       AnnualRidershipinMillions: "2",
       Visited: [],
       WikiPage: "url",
-      Modes: "some",
+      Modes: [],
       TransitMap: [],
       RollingStock: "some",
       PaymentType: [],
