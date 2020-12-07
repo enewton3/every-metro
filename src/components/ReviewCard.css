@@ -15,12 +15,14 @@
 .review-card > h4 {
   grid-area: name;
   margin: 0;
+  text-align: left;
 }
 
 .review-card > h5 {
   grid-area: date;
   margin: 0;
   display: inline-block;
+  text-align: right;
 }
 
 .review-card > p {

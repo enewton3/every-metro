@@ -2,7 +2,8 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: 20px 0 0 0;
+  margin: 20px auto;
+  max-width: 600px;
 }
 
 .detailsDiv {
@@ -10,12 +11,13 @@
   margin: 0;
 }
 
-.detail {
-  margin: 0 0 0 10px;
+.detail,
+.detailsDiv > h2 {
+  margin: 0;
 }
 
 .images {
-  margin: 25px;
+  margin: 25px 25px 25px 70px;
   display: flex;
   flex-flow: column wrap;
 }
@@ -32,5 +34,10 @@
 }
 
 .reviews-section {
-  margin: 25px 25px 100px 25px;
+  margin: 25px 25px 50px 25px;
+}
+
+.reviews-section > h3,
+.reviews-section > h4 {
+  margin: 0;
 }
