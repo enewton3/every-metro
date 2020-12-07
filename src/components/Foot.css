@@ -18,3 +18,14 @@
 .footer > div > img {
   display: inline-block;
 }
+
+.footer > div > p {
+  margin: 5px 0 5px 0;
+}
+
+.socialIcon {
+  height: 30px;
+  width: 30px;
+  align-self: center;
+  margin: 0 10px 0 10px;
+}
