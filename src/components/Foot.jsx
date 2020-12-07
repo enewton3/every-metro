@@ -3,7 +3,10 @@ import React from "react";
 export default function Foot() {
   return (
     <div>
-      <h4>This is a footer</h4>
+      <p>
+        Built for General Assembly Software Engineering Immersive <br />{" "}
+        Copyright Evyn Newton 2020
+      </p>
     </div>
   );
 }
