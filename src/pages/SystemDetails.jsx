@@ -194,6 +194,7 @@ export default function SystemDetails() {
       </section>
       {/* Review Section */}
       <section className="reviews-section">
+        <h3>Reviews and Suggestions</h3>
         {reviews.map((review) => (
           <ReviewCard review={review} />
         ))}
