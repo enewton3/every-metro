@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { baseURL, config } from "../services";
 import "./SystemDetails.css";
 import detailsimg from "../images/details.jpg";
+import ReviewCard from "../components/ReviewCard";
 
 export default function SystemDetails() {
   const [system, setSystem] = useState({
@@ -47,11 +48,28 @@ export default function SystemDetails() {
     }
   }
 
+  async function getReviews() {
+    const url = `${baseURL}/reviews`;
+    try {
+      let response = await axios.get(url, config);
+      let records = response.data.records;
+      console.log("records", records);
+      let systemReviews = records.filter(
+        (item) => item.fields.Metro_Systems[0] === params.id
+      );
+      console.log("reviews", systemReviews);
+      setReviews(systemReviews);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   let headerImage = system.fields.image ? system.fields.image : detailsimg;
 
   useEffect(() => {
     getSystem();
-  });
+    getReviews();
+  }, []);
 
   return (
     <div>
@@ -119,8 +137,10 @@ export default function SystemDetails() {
           <p className="detail list">
             <strong>Payment Types: </strong>
             {system.fields.PaymentType
-              ? system.fields.PaymentType.map((item) => (
-                  <span className="paymentType">{item}</span>
+              ? system.fields.PaymentType.map((item, index) => (
+                  <span key={`pt${index}`} className="paymentType">
+                    {item}
+                  </span>
                 ))
               : system.fields.PaymentType}
           </p>
@@ -131,8 +151,10 @@ export default function SystemDetails() {
           <p className="detail list">
             <strong>Modes: </strong>
             {system.fields.Modes
-              ? system.fields.Modes.map((item) => (
-                  <span className="mode">{item}</span>
+              ? system.fields.Modes.map((item, index) => (
+                  <span key={`m${index}`} className="mode">
+                    {item}
+                  </span>
                 ))
               : system.fields.Modes}
           </p>
@@ -159,17 +181,23 @@ export default function SystemDetails() {
             src={`${system.fields.logo}`}
             alt={`${system.fields.OperatedBy} logo`}
           />
-          <img
+          {/* <img
             id="transit-map"
             src={`${
-              system.fields.TransitMap ? system.fields.TransitMap[0] : null
+              system.fields.TransitMap
+                ? `url(${system.fields.TransitMap[0].url})`
+                : null
             }`}
-            alt={`${system.fields.name} transit map`}
-          />
+            alt={`${system.fields.Name} transit map`}
+          /> */}
         </div>
       </section>
       {/* Review Section */}
-      <section></section>
+      <section className="reviews-section">
+        {reviews.map((review) => (
+          <ReviewCard review={review} />
+        ))}
+      </section>
     </div>
   );
 }
