@@ -2,6 +2,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { baseURL, config } from "../services";
+import "./SystemDetails.css";
 
 export default function SystemDetails() {
   const [system, setSystem] = useState({
@@ -33,8 +34,6 @@ export default function SystemDetails() {
   });
 
   const params = useParams();
-  const keys = Object.keys(system.fields);
-  // let headerImage = system.fields.image ? system.fields.image : false;
 
   async function getSystem() {
     const url = `${baseURL}/Metro_Systems/${params.id}`;
@@ -58,54 +57,37 @@ export default function SystemDetails() {
       >
         <h1>{system.fields.Name}</h1>
       </div>
+      <h2>System Details</h2>
       <div className="detailsDiv">
-        <h2>System Details</h2>
-        <h3 className="detailLabel">City:</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">State:</h3>
-        <h3 className="detail">{system.fields.State}</h3>
-        <h3 className="detailLabel">Country</h3>
-        <h3 className="detail">{system.fields.Country}</h3>
-        <h3 className="detailLabel">Region:</h3>
-        <h3 className="detail">{system.fields.Region}</h3>
-        <h3 className="detailLabel">Operated By:</h3>
-        <h3 className="detail">{system.fields.OperatedBy}</h3>
-        <h3 className="detailLabel">Year Opened:</h3>
-        <h3 className="detail">{system.fields.YearOpened}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
-        <h3 className="detailLabel">City</h3>
-        <h3 className="detail">{system.fields.City}</h3>
+        <p className="detail">
+          <strong>City:</strong>{" "}
+          <span className="detail-value">{system.fields.City}</span>
+        </p>
+        <p className="detail">State: {system.fields.State}</p>
+        <p className="detail">Country {system.fields.Country}</p>
+        <p className="detail">Region: {system.fields.Region}</p>
+        <p className="detail">Operated By: {system.fields.OperatedBy}</p>
+        <p className="detail">Year Opened: {system.fields.YearOpened}</p>
+        <p className="detail">Number of Lines: {system.fields.NumOfLines}</p>
+        <p className="detail">Number of Stations: {system.fields.Stations}</p>
+        <p className="detail">System Length: {system.fields.SystemLength}</p>
+        <p className="detail">
+          Annual Ridership in Millions:{" "}
+          {system.fields.AnnualRidershipinMillions}
+        </p>
+        <p className="detail">Wiki Page: {system.fields.WikiPage}</p>
+        <p className="detail">Rolling Stock:{system.fields.RollingStock}</p>
+        <p className="detail">
+          Payment Types:
+          {/* {system.fields.PaymentType.map((item) => ({ item }))} */}
+        </p>
+        <p className="detail">Metro Card Name:{system.fields.MetroCardName}</p>
+        <p className="detail">Modes:</p>
+        {/* {() => {
+          system.fields.Modes.map((item) => ({ item }));
+        }} */}
+        <p className="detail">Transit Museum: {system.fields.TransitMuseum}</p>
+        <p className="detail">TRANSIT MAP IMAGE Light Rail / Trams</p>
       </div>
     </div>
   );

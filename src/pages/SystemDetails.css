@@ -1,0 +1,14 @@
+.detailsDiv {
+  text-align: left;
+}
+
+.detail {
+  margin: 0 0 0 25px;
+}
+.detail-value {
+  text-align: right;
+}
+.payment-type,
+.mode {
+  display: inline;
+}
