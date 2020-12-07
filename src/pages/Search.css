@@ -1,7 +1,19 @@
 .search {
   margin: 10px 0 0 0;
+  text-align: center;
 }
 
 .countries-dropdown {
+  margin: 10px 0 0 0;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.systems {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
   margin: 10px 0 0 0;
 }

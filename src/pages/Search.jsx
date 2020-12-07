@@ -105,20 +105,28 @@ function Search() {
           />
           <button type="submit">Search</button>
         </form>
+        <label className="dropdown-label" for="country-dropdown">
+          Country:
+        </label>
+
         <SearchDropdown
+          id="country-dropdown"
           name="countries"
           setSearched={setSearchedCountry}
           searched={searchedCountry}
           array={countries}
         />
+        <label className="dropdown-label" for="city-dropdown">
+          City:
+        </label>
         <SearchDropdown
           name="cities"
+          id="city-dropdown"
           setSearched={setSearchedCity}
           searched={searchedCity}
           array={cities}
         />
       </div>
-
       <div className="systems">
         {searchedSystems.map((system, index) => (
           <Link key={`${index}`} to={`/details/${system.id}`}>

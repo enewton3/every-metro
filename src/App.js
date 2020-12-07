@@ -5,13 +5,16 @@ import About from "./pages/About";
 import Search from "./pages/Search";
 import Track from "./pages/Track";
 import SystemDetails from "./pages/SystemDetails";
+import Foot from "./components/Foot";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Nav />
+      <header>
+        <Nav />
+      </header>
       <Switch>
         <Route exact path="/">
           <Home />
@@ -29,6 +32,9 @@ function App() {
           <SystemDetails />
         </Route>
       </Switch>
+      <footer>
+        <Foot />
+      </footer>
     </div>
   );
 }
