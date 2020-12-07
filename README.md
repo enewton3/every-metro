@@ -84,11 +84,11 @@ id: "rec1mRM5ocUOicW1u"
 | Nav Styling                    |    H     |      1hrs      |     1hrs      |    0hrs     |
 | Search Page                    |    H     |      2hrs      |     2hrs      |    0hrs     |
 | Search Functionality           |    H     |      2hrs      |     2hrs      |    0hrs     |
-| Search Page Styling            |    H     |      2hrs      |     0hrs      |    0hrs     |
-| System Card                    |    H     |      2hrs      |     0hrs      |    0hrs     |
+| Search Page Styling            |    H     |      2hrs      |     1hrs      |    0hrs     |
+| System Card                    |    H     |      2hrs      |     1hrs      |    0hrs     |
 | System Card Styling            |    H     |      1hrs      |     0hrs      |    0hrs     |
-| System Details Page            |    H     |      3hrs      |     0hrs      |    0hrs     |
-| System Details Styling         |    H     |      2hrs      |     0hrs      |    0hrs     |
+| System Details Page            |    H     |      3hrs      |     3hrs      |    0hrs     |
+| System Details Styling         |    H     |      2hrs      |     1hrs      |    0hrs     |
 | Reviews Components             |    H     |      2hrs      |     0hrs      |    0hrs     |
 | Reviews Stylings               |    H     |      2hrs      |     0hrs      |    0hrs     |
 | Add A review                   |    H     |      2hrs      |     0hrs      |    0hrs     |
