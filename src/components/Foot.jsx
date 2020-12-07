@@ -1,10 +1,10 @@
-import React from "react";
+import "./Foot.css";
 
 export default function Foot() {
   return (
-    <div>
+    <div className="footer">
       <p>
-        Built for General Assembly Software Engineering Immersive <br />{" "}
+        Built for General Assembly Software Engineering Immersive <br />
         Copyright Evyn Newton 2020
       </p>
     </div>

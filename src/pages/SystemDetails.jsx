@@ -115,7 +115,11 @@ export default function SystemDetails() {
         <p className="detail">
           <strong>Payment Types: </strong>
           {system.fields.PaymentType.map((item) => (
-            <span>{item} </span>
+            <span className="paymentType">
+              {" "}
+              <br />
+              {item}{" "}
+            </span>
           ))}
         </p>
         <p className="detail">
@@ -124,9 +128,12 @@ export default function SystemDetails() {
         </p>
         <p className="detail">
           <strong>Modes: </strong>
-          {/* {system.fields.Modes.map((item) => (
-            <span>{item} </span>
-          ))} */}
+          {system.fields.Modes.map((item) => (
+            <span className="mode">
+              <br />
+              {item}{" "}
+            </span>
+          ))}
         </p>
         <p className="detail">
           <strong>Transit Museum: </strong>

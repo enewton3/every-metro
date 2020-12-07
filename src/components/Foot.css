@@ -1,0 +1,15 @@
+.footer {
+  background-color: #3b60e4;
+  color: #edcb96;
+  display: flex;
+  flex-flow: row no-wrap;
+  align-items: center;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  font-size: 10px;
+}
+
+.footer > p {
+  margin: 0 auto;
+}
