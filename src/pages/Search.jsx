@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchDropdown from "../components/SearchDropdown";
 import SystemCard from "../components/SystemCard";
+// import TypeAhead from "../components/TypeAhead";
 import "./Search.css";
 
 function Search() {
@@ -15,53 +16,12 @@ function Search() {
   const [searchedCity, setSearchedCity] = useState("");
   const [searchedSystems, setSearchedSystems] = useState([]);
 
-  async function getSystems() {
-    let pageOneURL = `${baseURL}/Metro_Systems`;
-    try {
-      let response = await axios.get(pageOneURL, config);
-      let offset = response.data.offset;
-      let pageTwoURL = `${baseURL}/Metro_Systems?offset=${offset}`;
-      let pageTwoResponse = await axios.get(pageTwoURL, config);
-      let pageOne = response.data.records;
-      let pageTwo = pageTwoResponse.data.records;
-      let concattedRecords = [...pageOne, ...pageTwo];
-      console.log(concattedRecords);
-      setSystems(concattedRecords);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
   function removeThenAlpha(arr) {
     //takes an array, remove dupes, then alphabatizes
     let newArray = arr
       .filter((item, index) => arr.indexOf(item) === index)
       .sort();
     return newArray;
-  }
-
-  function getCountries() {
-    let countriesArray = removeThenAlpha(
-      systems.map((item) => item.fields.Country)
-    );
-    setCountries(countriesArray);
-  }
-
-  function getCities() {
-    let citiesInCountry = systems.filter(
-      (item) => item.fields.Country === searchedCountry
-    );
-    let citiesArray = removeThenAlpha(
-      citiesInCountry.map((item) => item.fields.City)
-    );
-    setCities(citiesArray);
-  }
-
-  function findCitySystems() {
-    let systemsInCity = systems.filter(
-      (item) => item.fields.City === searchedCity
-    );
-    setSearchedSystems(systemsInCity);
   }
 
   function handleSubmit(e) {
@@ -71,20 +31,59 @@ function Search() {
 
   // All of the UseEffects...
   useEffect(() => {
+    async function getSystems() {
+      let pageOneURL = `${baseURL}/Metro_Systems`;
+      try {
+        let response = await axios.get(pageOneURL, config);
+        let offset = response.data.offset;
+        let pageTwoURL = `${baseURL}/Metro_Systems?offset=${offset}`;
+        let pageTwoResponse = await axios.get(pageTwoURL, config);
+        let pageOne = response.data.records;
+        let pageTwo = pageTwoResponse.data.records;
+        let concattedRecords = [...pageOne, ...pageTwo];
+        console.log(concattedRecords);
+        setSystems(concattedRecords);
+      } catch (error) {
+        console.log(error);
+      }
+    }
     getSystems();
   }, []);
 
   useEffect(() => {
+    function getCountries() {
+      let countriesArray = removeThenAlpha(
+        systems.map((item) => item.fields.Country)
+      );
+      setCountries(countriesArray);
+    }
     getCountries();
   }, [systems]);
 
   useEffect(() => {
+    function getCities() {
+      let citiesInCountry = systems.filter(
+        (item) => item.fields.Country === searchedCountry
+      );
+      let citiesArray = removeThenAlpha(
+        citiesInCountry.map((item) => item.fields.City)
+      );
+      setCities(citiesArray);
+    }
+
     getCities();
-  }, [searchedCountry]);
+  }, [searchedCountry, systems]);
 
   useEffect(() => {
+    function findCitySystems() {
+      let systemsInCity = systems.filter(
+        (item) => item.fields.City === searchedCity
+      );
+      setSearchedSystems(systemsInCity);
+    }
+
     findCitySystems();
-  }, [searchedCity]);
+  }, [searchedCity, systems]);
 
   return (
     <div>
@@ -105,7 +104,7 @@ function Search() {
           />
           <button type="submit">Search</button>
         </form>
-        <label className="dropdown-label" for="country-dropdown">
+        <label className="dropdown-label" htmlFor="country-dropdown">
           Country:
         </label>
 
@@ -116,7 +115,7 @@ function Search() {
           searched={searchedCountry}
           array={countries}
         />
-        <label className="dropdown-label" for="city-dropdown">
+        <label className="dropdown-label" htmlFor="city-dropdown">
           City:
         </label>
         <SearchDropdown

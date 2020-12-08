@@ -5,6 +5,7 @@ import { baseURL, config } from "../services";
 import "./SystemDetails.css";
 import detailsimg from "../images/details.jpg";
 import ReviewCard from "../components/ReviewCard";
+import ReviewOverlay from "../components/ReviewOverlay";
 
 export default function SystemDetails() {
   const [system, setSystem] = useState({
@@ -35,41 +36,40 @@ export default function SystemDetails() {
     },
   });
   const [reviews, setReviews] = useState([]);
+  const [overlayToggle, setOverlayToggle] = useState(false);
 
   const params = useParams();
 
-  async function getSystem() {
-    const url = `${baseURL}/Metro_Systems/${params.id}`;
-    try {
-      let response = await axios.get(url, config);
-      setSystem(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  async function getReviews() {
-    const url = `${baseURL}/reviews`;
-    try {
-      let response = await axios.get(url, config);
-      let records = response.data.records;
-      console.log("records", records);
-      let systemReviews = records.filter(
-        (item) => item.fields.Metro_Systems[0] === params.id
-      );
-      console.log("reviews", systemReviews);
-      setReviews(systemReviews);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  let headerImage = system.fields.image ? system.fields.image : detailsimg;
-
   useEffect(() => {
+    async function getSystem() {
+      const url = `${baseURL}/Metro_Systems/${params.id}`;
+      try {
+        let response = await axios.get(url, config);
+        setSystem(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    async function getReviews() {
+      const url = `${baseURL}/reviews`;
+      try {
+        let response = await axios.get(url, config);
+        let records = response.data.records;
+        let systemReviews = records.filter(
+          (item) => item.fields.Metro_Systems[0] === params.id
+        );
+        setReviews(systemReviews);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
     getSystem();
     getReviews();
-  }, []);
+  }, [params.id]);
+
+  let headerImage = system.fields.image ? system.fields.image : detailsimg;
 
   return (
     <div>
@@ -196,9 +196,14 @@ export default function SystemDetails() {
       <section className="reviews-section">
         <h3>Reviews and Suggestions</h3>
         {reviews.map((review) => (
-          <ReviewCard review={review} />
+          <ReviewCard key={review.id} review={review} />
         ))}
-        <h4>Add a review or suggestion</h4>
+        <button>Add a review or suggestion</button>
+        {overlayToggle ? (
+          true
+        ) : (
+          <ReviewOverlay setOverlayToggle={setOverlayToggle} />
+        )}
       </section>
     </div>
   );
