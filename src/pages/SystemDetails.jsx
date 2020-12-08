@@ -41,6 +41,24 @@ export default function SystemDetails() {
   const params = useParams();
 
   useEffect(() => {
+    async function getReviews() {
+      const url = `${baseURL}/reviews`;
+      try {
+        let response = await axios.get(url, config);
+        let records = response.data.records;
+        let systemReviews = records.filter(
+          (item) => item.fields.Metro_Systems[0] === params.id
+        );
+        console.log(systemReviews);
+        setReviews(systemReviews);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getReviews();
+  }, [overlayToggle, params.id]);
+
+  useEffect(() => {
     async function getSystem() {
       const url = `${baseURL}/Metro_Systems/${params.id}`;
       try {
@@ -50,23 +68,7 @@ export default function SystemDetails() {
         console.log(error);
       }
     }
-
-    async function getReviews() {
-      const url = `${baseURL}/reviews`;
-      try {
-        let response = await axios.get(url, config);
-        let records = response.data.records;
-        let systemReviews = records.filter(
-          (item) => item.fields.Metro_Systems[0] === params.id
-        );
-        setReviews(systemReviews);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-
     getSystem();
-    getReviews();
   }, [params.id]);
 
   let headerImage = system.fields.image ? system.fields.image : detailsimg;
@@ -195,14 +197,17 @@ export default function SystemDetails() {
       {/* Review Section */}
       <section className="reviews-section">
         <h3>Reviews and Suggestions</h3>
+        <button onClick={() => setOverlayToggle(!overlayToggle)}>
+          Add your own!
+        </button>
         {reviews.map((review) => (
           <ReviewCard key={review.id} review={review} />
         ))}
-        <button>Add a review or suggestion</button>
+
         {overlayToggle ? (
-          true
+          <ReviewOverlay setOverlayToggle={setOverlayToggle} system={system} />
         ) : (
-          <ReviewOverlay setOverlayToggle={setOverlayToggle} />
+          false
         )}
       </section>
     </div>
