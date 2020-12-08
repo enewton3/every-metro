@@ -76,8 +76,8 @@ function Search() {
 
   useEffect(() => {
     function findCitySystems() {
-      let systemsInCity = systems.filter(
-        (item) => item.fields.City === searchedCity
+      let systemsInCity = systems.filter((item) =>
+        item.fields.City.toLowerCase().includes(searchedCity.toLowerCase())
       );
       setSearchedSystems(systemsInCity);
     }

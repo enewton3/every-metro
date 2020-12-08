@@ -1,4 +1,10 @@
 .overlay {
   transition: all 5s linear 5s;
   border: 2px solid black;
+  position: fixed;
+  bottom: 50px;
+  left: 10vw;
+  height: 20vh;
+  width: 70vw;
+  background-color: grey;
 }

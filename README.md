@@ -49,7 +49,7 @@ id: "rec1mRM5ocUOicW1u"
 - makes API call to get list of metros/cities ---tick---
 - able to search for a specific system ---tick---
 - users can see detailed information about different metro systems ---tick---
-- users can leave reviews and suggestions for each metro system
+- users can leave reviews and suggestions for each metro system ---tick---
 - conditionally render information if available
 - responsive styling and CSS
 
@@ -86,12 +86,12 @@ id: "rec1mRM5ocUOicW1u"
 | Search Functionality           |    H     |      2hrs      |     2hrs      |    0hrs     |
 | Search Page Styling            |    H     |      2hrs      |     1hrs      |    0hrs     |
 | System Card                    |    H     |      2hrs      |     1hrs      |    0hrs     |
-| System Card Styling            |    H     |      1hrs      |     0hrs      |    0hrs     |
+| System Card Styling            |    H     |      1hrs      |     .5hrs     |    0hrs     |
 | System Details Page            |    H     |      3hrs      |     5hrs      |    0hrs     |
 | System Details Styling         |    H     |      2hrs      |     2hrs      |    0hrs     |
 | Reviews Components             |    H     |      2hrs      |     2hrs      |    0hrs     |
-| Reviews Stylings               |    H     |      2hrs      |     1hrs      |    0hrs     |
-| Add A review                   |    H     |      2hrs      |     0hrs      |    0hrs     |
+| Reviews Stylings               |    H     |      2hrs      |     2hrs      |    0hrs     |
+| Add A review                   |    H     |      2hrs      |     2hrs      |    0hrs     |
 | Responsive Styling             |    M     |      3hrs      |     0hrs      |    0hrs     |
 | About Page                     |    M     |      1hrs      |     0hrs      |    0hrs     |
 | About Page Styling             |    M     |      1hrs      |     0hrs      |    0hrs     |

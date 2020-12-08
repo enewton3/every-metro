@@ -2,7 +2,7 @@ import "./SystemCard.css";
 
 export default function SystemCard(props) {
   const { system } = props;
-  console.log(system);
+  // console.log(system);
   return (
     <div
       className="system-card"

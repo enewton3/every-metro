@@ -1,11 +1,12 @@
 import axios from "axios";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { baseURL, config } from "../services";
 import "./SystemDetails.css";
 import detailsimg from "../images/details.jpg";
 import ReviewCard from "../components/ReviewCard";
 import ReviewOverlay from "../components/ReviewOverlay";
+import Detail from "../components/Detail";
 
 export default function SystemDetails() {
   const [system, setSystem] = useState({
@@ -46,10 +47,19 @@ export default function SystemDetails() {
       try {
         let response = await axios.get(url, config);
         let records = response.data.records;
-        let systemReviews = records.filter(
-          (item) => item.fields.Metro_Systems[0] === params.id
-        );
-        console.log(systemReviews);
+        let systemReviews = records
+          .filter((item) => item.fields.Metro_Systems[0] === params.id)
+          .sort((a, b) => {
+            const first = new Date(a.fields.Created);
+            const second = new Date(b.fields.Created);
+            if (second > first) {
+              return 1;
+            } else if (first > second) {
+              return -1;
+            } else {
+              return 0;
+            }
+          });
         setReviews(systemReviews);
       } catch (error) {
         console.log(error);
@@ -72,6 +82,8 @@ export default function SystemDetails() {
   }, [params.id]);
 
   let headerImage = system.fields.image ? system.fields.image : detailsimg;
+  //THANKS SOLEIL FOR SOME REDUCE FUNCTIONS!
+  const systemEntriesAsArray = Object.entries(system.fields);
 
   return (
     <div>
@@ -82,9 +94,14 @@ export default function SystemDetails() {
         <h1>{system.fields.Name}</h1>
       </div>
       <section className="system-details">
+        {/* Map through keys, make a new Detail component for each, pass it the key and the value */}
+
         <div className="detailsDiv">
           <h2>System Details</h2>
-          <p className="detail">
+          {systemEntriesAsArray.map((item) => (
+            <Detail key={item} detail={item} />
+          ))}
+          {/* <p className="detail">
             <strong>City:</strong>{" "}
             <span className="detail-value">{system.fields.City}</span>
           </p>
@@ -175,7 +192,7 @@ export default function SystemDetails() {
                 false
               )}
             </span>
-          </p>
+          </p> */}
         </div>
         <div className="images">
           <img
