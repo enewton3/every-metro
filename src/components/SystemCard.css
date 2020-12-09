@@ -40,3 +40,36 @@
 #num-of-lines {
   grid-area: lines;
 }
+
+@media (max-width: 1000px) {
+  .system-card {
+    width: 90vw;
+    height: 20vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .system-card {
+    display: grid;
+    grid-template-areas: "name location";
+  }
+
+  #name {
+    grid-area: name;
+    font-size: 1.4rem;
+    margin: 5px;
+  }
+
+  #location {
+    grid-area: location;
+    max-width: 100%;
+    margin: 10px;
+    justify-self: center;
+    align-self: center;
+  }
+
+  #operated-by,
+  #num-of-lines {
+    display: none;
+  }
+}
