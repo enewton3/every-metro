@@ -90,40 +90,42 @@ function Search() {
         className="header-img"
         style={{ backgroundImage: `url(${searchimg})` }}
       >
-        <h1>Search Metro Systems</h1>
+        <h1 className="search-title">Search Metro Systems</h1>
       </div>
 
       <div className="search">
         <form onSubmit={handleSubmit}>
           <input
+            className="search-bar"
             type="text"
             placeholder="Search Systems"
             value={searchedCity}
             onChange={(e) => setSearchedCity(e.target.value)}
           />
           <button type="submit">Search</button>
+          <label className="dropdown-label" htmlFor="country-dropdown">
+            Country:
+          </label>
+          <div className="dropdowns">
+            <SearchDropdown
+              id="country-dropdown"
+              name="countries"
+              setSearched={setSearchedCountry}
+              searched={searchedCountry}
+              array={countries}
+            />
+            <label className="dropdown-label" htmlFor="city-dropdown">
+              City:
+            </label>
+            <SearchDropdown
+              name="cities"
+              id="city-dropdown"
+              setSearched={setSearchedCity}
+              searched={searchedCity}
+              array={cities}
+            />
+          </div>
         </form>
-        <label className="dropdown-label" htmlFor="country-dropdown">
-          Country:
-        </label>
-
-        <SearchDropdown
-          id="country-dropdown"
-          name="countries"
-          setSearched={setSearchedCountry}
-          searched={searchedCountry}
-          array={countries}
-        />
-        <label className="dropdown-label" htmlFor="city-dropdown">
-          City:
-        </label>
-        <SearchDropdown
-          name="cities"
-          id="city-dropdown"
-          setSearched={setSearchedCity}
-          searched={searchedCity}
-          array={cities}
-        />
       </div>
       <div className="systems">
         {searchedSystems.map((system, index) => (

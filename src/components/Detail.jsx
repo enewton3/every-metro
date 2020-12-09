@@ -90,7 +90,7 @@ export default function Detail(props) {
         <p className="detail list">
           <strong>{newKey}: </strong>
           {value.map((item, index) => (
-            <a href={value[index].url} target="_blank">
+            <a href={value[index].url} target="_blank" rel="noreferrer">
               here
             </a>
           ))}

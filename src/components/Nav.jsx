@@ -4,21 +4,29 @@ import "./Nav.css";
 export default function Nav() {
   return (
     <div className="nav">
-      <Link to="/">
-        <h2>Every Metro in the World</h2>
+      <Link className="nav-title" to="/">
+        <h2 className="nav-title">Every Metro in the World</h2>
       </Link>
-      <ul>
+      <ul className="link-list">
         <li>
-          <Link to="/search">Search for a Metro System</Link>
+          <Link className="nav-link" to="/search">
+            Search for a Metro System
+          </Link>
         </li>
         <li>
-          <Link to="/tracker">Track Every Metro</Link>
+          <Link className="nav-link" to="/tracker">
+            Track Every Metro
+          </Link>
         </li>
         <li>
-          <Link to="/search">Contribute Data</Link>
+          <Link className="nav-link" to="/search">
+            Contribute Data
+          </Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link className="nav-link" to="/about">
+            About
+          </Link>
         </li>
       </ul>
     </div>

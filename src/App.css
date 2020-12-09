@@ -1,6 +1,5 @@
 body {
   background-color: #f7f2f8;
-  font-family: "Roboto", sans-serif;
 }
 
 .App {
@@ -28,4 +27,24 @@ footer {
   padding: 0;
   position: fixed;
   bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #edcb96;
+}
+
+a:visited {
+  color: #edcb96;
+}
+
+a:active {
+  color: black;
+}
+
+a:hover {
+  color: #edcb96;
 }

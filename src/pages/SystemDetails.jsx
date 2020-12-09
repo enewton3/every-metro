@@ -108,14 +108,22 @@ export default function SystemDetails() {
 
         {/* System Image and Map */}
         <div className="images">
-          <a href={`${system.fields.OperatorWebsite}`} target="_blank">
+          <a
+            href={`${system.fields.OperatorWebsite}`}
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               id="system-image"
               src={`${system.fields.logo ? system.fields.logo : logoDefault}`}
               alt={`${system.fields.OperatedBy} logo`}
             />
           </a>
-          <a href={`${system.fields.TransitMapUrl}`} target="_blank">
+          <a
+            href={`${system.fields.TransitMapUrl}`}
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               id="transit-map"
               src={`${
@@ -127,6 +135,9 @@ export default function SystemDetails() {
             />
           </a>
         </div>
+        <button id="contribute-button">
+          See info missing? Contribute it here!
+        </button>
       </section>
 
       {/* Review Section */}

@@ -1,7 +1,11 @@
 .system-details {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "details logo"
+    "details map"
+    "details button";
   margin: 20px auto;
   max-width: 600px;
 }
@@ -22,9 +26,20 @@
   flex-flow: column wrap;
 }
 
-.images > a > img {
+#system-image {
+  grid-area: logo;
   max-width: 200px;
   max-height: 200px;
+}
+
+#transit-map {
+  grid-area: map;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+#contribute-button {
+  grid-area: button;
 }
 
 .list {
