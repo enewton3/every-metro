@@ -25,12 +25,14 @@ export default function ReviewOverlay(props) {
     <div className="overlay">
       <form onSubmit={handleSubmit}>
         <input
+          className="full-name"
           type="text"
           placeholder="Full Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <input
+          className="content"
           type="text"
           placeholder="Add your review or suggestion here"
           value={content}
