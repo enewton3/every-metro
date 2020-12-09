@@ -1,21 +1,40 @@
 .overlay {
   /* transition: all 5s linear 5s; */
-  border: 2px solid black;
+  border: 1px solid black;
   position: fixed;
-  bottom: 50px;
+  bottom: 35px;
   left: 15vw;
   height: 20vh;
   width: 70vw;
-  background-color: grey;
-  display: flex;
-  flex-flow: row wrap;
+  background-color: rgba(247, 242, 248, 0.9);
+  display: grid;
+  grid-template-rows: 25% 75%;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "name button"
+    "content content";
+
+  /* flex-flow: column wrap;
+  justify-content: center;
+  align-content: flex-start; */
 }
 
 .full-name {
-  align-self: flex-start;
+  grid-area: name;
+  margin: 3px;
+  /* height: 25%; */
+  /* align-self: flex-start; */
 }
 
 .content {
-  height: 70%;
-  width: 95%;
+  grid-area: content;
+  margin: 3px;
+  /* height: 65%;
+  width: 95%; */
+}
+
+.submit {
+  grid-area: button;
+  margin: 3px;
+  /* height: 25%; */
 }

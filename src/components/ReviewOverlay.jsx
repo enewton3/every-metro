@@ -22,8 +22,8 @@ export default function ReviewOverlay(props) {
   };
 
   return (
-    <div className="overlay">
-      <form onSubmit={handleSubmit}>
+    <div>
+      <form className="overlay" onSubmit={handleSubmit}>
         <input
           className="full-name"
           type="text"
@@ -38,7 +38,9 @@ export default function ReviewOverlay(props) {
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        <button className="submit" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );
