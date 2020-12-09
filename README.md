@@ -52,7 +52,7 @@ id: "rec1mRM5ocUOicW1u"
 - able to search for a specific system ---tick---
 - users can see detailed information about different metro systems ---tick---
 - users can leave reviews and suggestions for each metro system ---tick---
-- conditionally render information if available
+- conditionally render information if available ---tick---
 - responsive styling and CSS
 
 #### PostMVP
@@ -81,12 +81,12 @@ id: "rec1mRM5ocUOicW1u"
 | Wireframes and Pitch           |    H     |      2hrs      |     2hrs      |    2hrs     |
 | Base React App                 |    H     |      2hrs      |     2hrs      |    0hrs     |
 | Home Page                      |    H     |      2hrs      |     1hrs      |    0hrs     |
-| Home Page Styling              |    H     |      2hrs      |     .5hrs     |    0hrs     |
+| Home Page Styling              |    H     |      2hrs      |    1.5hrs     |    0hrs     |
 | Nav                            |    H     |      1hrs      |     1hrs      |    0hrs     |
-| Nav Styling                    |    H     |      1hrs      |     1hrs      |    0hrs     |
+| Nav Styling                    |    H     |      1hrs      |     2hrs      |    0hrs     |
 | Search Page                    |    H     |      2hrs      |     2hrs      |    0hrs     |
 | Search Functionality           |    H     |      2hrs      |     2hrs      |    0hrs     |
-| Search Page Styling            |    H     |      2hrs      |     1hrs      |    0hrs     |
+| Search Page Styling            |    H     |      2hrs      |     2hrs      |    0hrs     |
 | System Card                    |    H     |      2hrs      |     1hrs      |    0hrs     |
 | System Card Styling            |    H     |      1hrs      |     .5hrs     |    0hrs     |
 | System Details Page            |    H     |      3hrs      |     7hrs      |    0hrs     |
