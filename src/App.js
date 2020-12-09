@@ -7,6 +7,7 @@ import Track from "./pages/Track";
 import SystemDetails from "./pages/SystemDetails";
 import Foot from "./components/Foot";
 import Wrong from "./pages/Wrong";
+import Contribute from "./pages/Contribute";
 
 import "./App.css";
 
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route path="/details/:id">
             <SystemDetails />
+          </Route>
+          <Route path="/contribute/:id">
+            <Contribute />
           </Route>
           <Route path="/:404">
             <Wrong />

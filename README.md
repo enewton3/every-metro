@@ -53,7 +53,7 @@ id: "rec1mRM5ocUOicW1u"
 - users can see detailed information about different metro systems ---tick---
 - users can leave reviews and suggestions for each metro system ---tick---
 - conditionally render information if available ---tick---
-- responsive styling and CSS
+- responsive styling and CSS ---tick---
 
 #### PostMVP
 
@@ -90,17 +90,17 @@ id: "rec1mRM5ocUOicW1u"
 | System Card                    |    H     |      2hrs      |     1hrs      |    0hrs     |
 | System Card Styling            |    H     |      1hrs      |    2.5hrs     |    0hrs     |
 | System Details Page            |    H     |      3hrs      |     7hrs      |    0hrs     |
-| System Details Styling         |    H     |      2hrs      |     2hrs      |    0hrs     |
+| System Details Styling         |    H     |      2hrs      |     3hrs      |    0hrs     |
 | Reviews Components             |    H     |      2hrs      |     2hrs      |    0hrs     |
 | Reviews Stylings               |    H     |      2hrs      |     2hrs      |    0hrs     |
 | Add A review                   |    H     |      2hrs      |     2hrs      |    0hrs     |
-| Responsive Styling             |    M     |      3hrs      |     1hrs      |    0hrs     |
+| Responsive Styling             |    M     |      3hrs      |     3hrs      |    0hrs     |
 | About Page                     |    M     |      1hrs      |     0hrs      |    0hrs     |
 | About Page Styling             |    M     |      1hrs      |     0hrs      |    0hrs     |
 | Tracking Page                  |    L     |      2hrs      |     0hrs      |    0hrs     |
 | Tracking Page Styling          |    L     |      2hrs      |     0hrs      |    0hrs     |
 | Incorporate Light Rail Systems |    L     |      3hrs      |     0hrs      |    0hrs     |
-| Total                          |    H     |     42hrs      |     0hrs      |    0hrs     |
+| Total                          |    H     |     42hrs      |     39hrs     |    0hrs     |
 
 ## SWOT Analysis
 
