@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { baseURL, config } from "../services";
 import "./SystemDetails.css";
@@ -135,10 +135,12 @@ export default function SystemDetails() {
             alt={`${system.fields.Name} transit map`}
           />
         </a>
-        <button id="contribute-button">
-          See outdated or missing info? <br />
-          Contribute it here!
-        </button>
+        <Link to={`/contribute/${system.id}`} id="contribute-button">
+          <button>
+            See outdated or missing info? <br />
+            Contribute it here!
+          </button>
+        </Link>
       </section>
 
       {/* Review Section */}
