@@ -27,11 +27,11 @@ export default function Detail(props) {
 
   if (
     typeof newKey === "undefined" ||
-    key === "TransitMap" ||
     key === "MetroCardImage" ||
     key === "reviews" ||
     key === "image" ||
-    key === "logo"
+    key === "logo" ||
+    key === "TransitMapUrl"
   ) {
     return null;
   } else if (typeof value == "undefined") {
@@ -73,14 +73,38 @@ export default function Detail(props) {
           ))}
         </p>
       );
+    } else if (key === "Visited") {
+      return (
+        <p className="detail list">
+          <strong>{newKey}: </strong>
+          {value.map((item, index) => (
+            <Link to={`/visited/${item}`} key={`t${index}`}>
+              here
+            </Link>
+          ))}
+        </p>
+      );
+    } else if (key === "TransitMap") {
+      console.log(value);
+      return (
+        <p className="detail list">
+          <strong>{newKey}: </strong>
+          {value.map((item, index) => (
+            <a href={value[index].url} target="_blank">
+              here
+            </a>
+          ))}
+        </p>
+      );
+    } else {
+      return (
+        <p className="detail list">
+          <strong>{newKey}: </strong>
+          {value.map((item, index) => (
+            <span key={`m${index}`}>{item}</span>
+          ))}
+        </p>
+      );
     }
-    return (
-      <p className="detail list">
-        <strong>{newKey}: </strong>
-        {value.map((item, index) => (
-          <span key={`m${index}`}>{item}</span>
-        ))}
-      </p>
-    );
   }
 }

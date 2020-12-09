@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { baseURL, config } from "../services";
 import "./SystemDetails.css";
 import detailsimg from "../images/details.jpg";
+import logoDefault from "../images/undergroundicon.png";
+import mapDefault from "../images/mapicon.png";
 import ReviewCard from "../components/ReviewCard";
 import ReviewOverlay from "../components/ReviewOverlay";
 import Detail from "../components/Detail";
@@ -33,7 +35,6 @@ export default function SystemDetails() {
       Region: "",
       TransitMuseum: true,
       Notes: "",
-      image: "",
     },
   });
   const [reviews, setReviews] = useState([]);
@@ -82,135 +83,52 @@ export default function SystemDetails() {
   }, [params.id]);
 
   let headerImage = system.fields.image ? system.fields.image : detailsimg;
-  //THANKS SOLEIL FOR SOME REDUCE FUNCTIONS!
+
   const systemEntriesAsArray = Object.entries(system.fields);
+
+  console.log(system);
 
   return (
     <div>
+      {/* Header */}
       <div
         className="header-img"
         style={{ backgroundImage: `url(${headerImage})` }}
       >
         <h1>{system.fields.Name}</h1>
       </div>
+      {/* System Details */}
       <section className="system-details">
-        {/* Map through keys, make a new Detail component for each, pass it the key and the value */}
-
         <div className="detailsDiv">
           <h2>System Details</h2>
           {systemEntriesAsArray.map((item) => (
             <Detail key={item} detail={item} />
           ))}
-          {/* <p className="detail">
-            <strong>City:</strong>{" "}
-            <span className="detail-value">{system.fields.City}</span>
-          </p>
-          <p className="detail">
-            <strong>State: </strong>
-            <span>{system.fields.State}</span>
-          </p>
-          <p className="detail">
-            <strong>Country: </strong>
-            <span>{system.fields.Country}</span>
-          </p>
-          <p className="detail">
-            <strong>Region: </strong>
-            <span>{system.fields.Region}</span>
-          </p>
-          <p className="detail">
-            <strong>Operated By: </strong>
-            <span>{system.fields.OperatedBy}</span>
-          </p>
-          <p className="detail">
-            <strong>Year Opened: </strong>
-            <span>{system.fields.YearOpened}</span>
-          </p>
-          <p className="detail">
-            <strong>Number of Lines: </strong>
-            <span>{system.fields.NumOfLines}</span>
-          </p>
-          <p className="detail">
-            <strong>Number of Stations: </strong>
-            <span>{system.fields.Stations}</span>
-          </p>
-          <p className="detail">
-            <strong>System Length: </strong>
-            <span>{system.fields.SystemLength}</span>
-          </p>
-          <p className="detail">
-            <strong>Annual Ridership in Millions: </strong>
-            <span>{system.fields.AnnualRidershipinMillions}</span>
-          </p>
-          <p className="detail">
-            <strong>Wiki Page: </strong>
-            <span>
-              <a href={system.fields.WikiPage}> here </a>
-            </span>
-          </p>
-          <p className="detail">
-            <strong>Rolling Stock: </strong>
-            <span>
-              <a href={system.fields.RollingStock}>here </a>
-            </span>
-          </p>
-          <p className="detail list">
-            <strong>Payment Types: </strong>
-            {system.fields.PaymentType
-              ? system.fields.PaymentType.map((item, index) => (
-                  <span key={`pt${index}`} className="paymentType">
-                    {item}
-                  </span>
-                ))
-              : system.fields.PaymentType}
-          </p>
-          <p className="detail">
-            <strong>Metro Card Name: </strong>
-            <span>{system.fields.MetroCardName}</span>
-          </p>
-          <p className="detail list">
-            <strong>Modes: </strong>
-            {system.fields.Modes
-              ? system.fields.Modes.map((item, index) => (
-                  <span key={`m${index}`} className="mode">
-                    {item}
-                  </span>
-                ))
-              : system.fields.Modes}
-          </p>
-          <p className="detail">
-            <strong>Transit Museum: </strong>
-            <span>{system.fields.TransitMuseum ? "yes" : "no"}</span>
-          </p>
-          <p className="detail">
-            <strong>Light Rail System: </strong>
-            <span>
-              {system.fields.LightRailTrams ? (
-                <Link to={`/details/${system.fields.LightRailTrams}`}>
-                  here
-                </Link>
-              ) : (
-                false
-              )}
-            </span>
-          </p> */}
         </div>
+
+        {/* System Image and Map */}
         <div className="images">
-          <img
-            id="system-image"
-            src={`${system.fields.logo}`}
-            alt={`${system.fields.OperatedBy} logo`}
-          />
-          {/* <img
-            id="transit-map"
-            src={`${
-              system.fields.TransitMap
-                ? `url(${system.fields.TransitMap[0].url})`
-                : null
-            }`}
-            alt={`${system.fields.Name} transit map`}
-          /> */}
+          <a href={`${system.fields.OperatorWebsite}`} target="_blank">
+            <img
+              id="system-image"
+              src={`${system.fields.logo ? system.fields.logo : logoDefault}`}
+              alt={`${system.fields.OperatedBy} logo`}
+            />
+          </a>
+          <a href={`${system.fields.TransitMapUrl}`} target="_blank">
+            <img
+              id="transit-map"
+              src={`${
+                system.fields.TransitMapUrl
+                  ? system.fields.TransitMapUrl
+                  : mapDefault
+              }`}
+              alt={`${system.fields.Name} transit map`}
+            />
+          </a>
         </div>
       </section>
+
       {/* Review Section */}
       <section className="reviews-section">
         <h3>Reviews and Suggestions</h3>

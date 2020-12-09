@@ -41,7 +41,6 @@ function Search() {
         let pageOne = response.data.records;
         let pageTwo = pageTwoResponse.data.records;
         let concattedRecords = [...pageOne, ...pageTwo];
-        console.log(concattedRecords);
         setSystems(concattedRecords);
       } catch (error) {
         console.log(error);
