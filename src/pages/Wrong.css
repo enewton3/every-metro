@@ -1,0 +1,29 @@
+#wrong-img {
+  width: 100vw;
+  height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+}
+
+#theText {
+  margin: 300px auto 0 auto;
+  color: #edcb96;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px black;
+}
+
+#goHome,
+#goHome > h4 {
+  margin: 0 auto 75px auto;
+  text-shadow: 2px 2px black;
+}
+
+@media (max-width: 500px) {
+  #wrong-text {
+    margin: 0 auto 10px auto;
+  }
+}

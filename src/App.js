@@ -16,26 +16,28 @@ function App() {
       <header>
         <Nav />
       </header>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/tracker">
-          <Track />
-        </Route>
-        <Route path="/search">
-          <Search />
-        </Route>
-        <Route path="/details/:id">
-          <SystemDetails />
-        </Route>
-        <Route path="/:404">
-          <Wrong />
-        </Route>
-      </Switch>
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/tracker">
+            <Track />
+          </Route>
+          <Route path="/search">
+            <Search />
+          </Route>
+          <Route path="/details/:id">
+            <SystemDetails />
+          </Route>
+          <Route path="/:404">
+            <Wrong />
+          </Route>
+        </Switch>
+      </main>
       <footer>
         <Foot />
       </footer>
