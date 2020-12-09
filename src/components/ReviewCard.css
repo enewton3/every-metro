@@ -1,9 +1,10 @@
 .review-card {
-  background: grey;
+  background-color: rgba(54, 82, 181, 0.75);
   border: 2px solid black;
   margin: 25px auto;
   max-width: 600px;
   padding: 10px;
+  /* color: #edcb96; */
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto;

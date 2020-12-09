@@ -6,6 +6,7 @@ import Search from "./pages/Search";
 import Track from "./pages/Track";
 import SystemDetails from "./pages/SystemDetails";
 import Foot from "./components/Foot";
+import Wrong from "./pages/Wrong";
 
 import "./App.css";
 
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route path="/details/:id">
           <SystemDetails />
+        </Route>
+        <Route path="/:404">
+          <Wrong />
         </Route>
       </Switch>
       <footer>

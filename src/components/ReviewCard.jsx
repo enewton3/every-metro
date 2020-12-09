@@ -14,9 +14,9 @@ export default function ReviewCard(props) {
 
   return (
     <div className="review-card">
-      <h4>{review.fields.name}</h4>
-      <h5>{flipDate(review.fields.Created)}</h5>
-      <p>{review.fields.content}</p>
+      <h4 className="review-name">{review.fields.name}</h4>
+      <h5 className="review-date">{flipDate(review.fields.Created)}</h5>
+      <p className="review-content">{review.fields.content}</p>
     </div>
   );
 }
