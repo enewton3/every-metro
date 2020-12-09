@@ -85,8 +85,8 @@ export default function SystemDetails() {
   let headerImage = system.fields.image ? system.fields.image : detailsimg;
 
   const systemEntriesAsArray = Object.entries(system.fields);
-
-  // console.log(system);
+  console.log(systemEntriesAsArray);
+  console.log(system);
 
   return (
     <div>
@@ -95,54 +95,55 @@ export default function SystemDetails() {
         className="header-img"
         style={{ backgroundImage: `url(${headerImage})` }}
       >
-        <h1>{system.fields.Name}</h1>
+        <h1 className="detail-head">{system.fields.Name}</h1>
       </div>
       {/* System Details */}
       <section className="system-details">
         <div className="detailsDiv">
-          <h2>System Details</h2>
+          <h2 id="details-title">System Details</h2>
           {systemEntriesAsArray.map((item) => (
             <Detail key={item} detail={item} />
           ))}
         </div>
 
         {/* System Image and Map */}
-        <div className="images">
-          <a
-            href={`${system.fields.OperatorWebsite}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              id="system-image"
-              src={`${system.fields.logo ? system.fields.logo : logoDefault}`}
-              alt={`${system.fields.OperatedBy} logo`}
-            />
-          </a>
-          <a
-            href={`${system.fields.TransitMapUrl}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              id="transit-map"
-              src={`${
-                system.fields.TransitMapUrl
-                  ? system.fields.TransitMapUrl
-                  : mapDefault
-              }`}
-              alt={`${system.fields.Name} transit map`}
-            />
-          </a>
-        </div>
+        <a
+          id="system-image"
+          href={`${system.fields.OperatorWebsite}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            id="system-image"
+            src={`${system.fields.logo ? system.fields.logo : logoDefault}`}
+            alt={`${system.fields.OperatedBy} logo`}
+          />
+        </a>
+        <a
+          id="transit-map"
+          href={`${system.fields.TransitMapUrl}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            id="transit-map"
+            src={`${
+              system.fields.TransitMapUrl
+                ? system.fields.TransitMapUrl
+                : mapDefault
+            }`}
+            alt={`${system.fields.Name} transit map`}
+          />
+        </a>
         <button id="contribute-button">
-          See info missing? Contribute it here!
+          See outdated or missing info? <br />
+          Contribute it here!
         </button>
       </section>
 
       {/* Review Section */}
       <section className="reviews-section">
-        <h3>Reviews and Suggestions</h3>
+        <h3 className="review-head">Reviews and Suggestions</h3>
         <button onClick={() => setOverlayToggle(!overlayToggle)}>
           Add your own!
         </button>
