@@ -103,10 +103,11 @@ function Search() {
             onChange={(e) => setSearchedCity(e.target.value)}
           />
           <button type="submit">Search</button>
-          <label className="dropdown-label" htmlFor="country-dropdown">
-            Country:
-          </label>
+
           <div className="dropdowns">
+            <label className="dropdown-label" htmlFor="country-dropdown">
+              Country:
+            </label>
             <SearchDropdown
               id="country-dropdown"
               name="countries"

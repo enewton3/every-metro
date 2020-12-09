@@ -17,10 +17,10 @@ body {
   align-items: flex-end;
 }
 
-.header-img > h1 {
+/* .header-img > h1 {
   margin: 0 0 25px 25px;
   color: #edcb96;
-}
+} */
 
 footer {
   margin: 0;

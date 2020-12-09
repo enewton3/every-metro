@@ -83,7 +83,7 @@ id: "rec1mRM5ocUOicW1u"
 | Home Page                      |    H     |      2hrs      |     1hrs      |    0hrs     |
 | Home Page Styling              |    H     |      2hrs      |    1.5hrs     |    0hrs     |
 | Nav                            |    H     |      1hrs      |     1hrs      |    0hrs     |
-| Nav Styling                    |    H     |      1hrs      |     2hrs      |    0hrs     |
+| Nav Styling                    |    H     |      1hrs      |     3hrs      |    0hrs     |
 | Search Page                    |    H     |      2hrs      |     2hrs      |    0hrs     |
 | Search Functionality           |    H     |      2hrs      |     2hrs      |    0hrs     |
 | Search Page Styling            |    H     |      2hrs      |     2hrs      |    0hrs     |
@@ -94,7 +94,7 @@ id: "rec1mRM5ocUOicW1u"
 | Reviews Components             |    H     |      2hrs      |     2hrs      |    0hrs     |
 | Reviews Stylings               |    H     |      2hrs      |     2hrs      |    0hrs     |
 | Add A review                   |    H     |      2hrs      |     2hrs      |    0hrs     |
-| Responsive Styling             |    M     |      3hrs      |     0hrs      |    0hrs     |
+| Responsive Styling             |    M     |      3hrs      |     1hrs      |    0hrs     |
 | About Page                     |    M     |      1hrs      |     0hrs      |    0hrs     |
 | About Page Styling             |    M     |      1hrs      |     0hrs      |    0hrs     |
 | Tracking Page                  |    L     |      2hrs      |     0hrs      |    0hrs     |
