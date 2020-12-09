@@ -22,8 +22,8 @@ export default function SystemCard(props) {
       <p id="num-of-lines">
         Number of Lines:
         <br />
-        {system.fields.numOfLines
-          ? system.fields.numOfLines
+        {system.fields.NumOfLines
+          ? system.fields.NumOfLines
           : "Data Missing, click here to contribute!"}
       </p>
     </div>
