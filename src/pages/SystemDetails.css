@@ -3,6 +3,7 @@
   text-shadow: 2px 2px grey;
   color: #edcb96;
   margin: 0 0 25px 25px;
+  max-height: 100%;
 }
 
 .system-details {
@@ -70,15 +71,29 @@
 
 @media (max-width: 620px) {
   .detail-head {
-    margin: 0 0 25px 0;
+    font-size: 150%;
+    margin: 0 auto 10px auto;
   }
 
   .system-details {
     display: flex;
     flex-flow: column wrap;
+    margin: 0;
   }
 
-  .details-div {
+  .detailsDiv {
+    margin: 10px;
+  }
+
+  #system-image,
+  #transit-map {
+    align-self: center;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 5px;
+  }
+
+  #contribute-button {
     margin: 20px;
   }
 }

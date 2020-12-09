@@ -15,3 +15,9 @@
   font-size: 3rem;
   text-shadow: 2px 2px grey;
 }
+
+@media (max-width: 500px) {
+  .home-title {
+    margin: 0 auto 10px auto;
+  }
+}
