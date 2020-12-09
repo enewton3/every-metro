@@ -86,7 +86,7 @@ export default function SystemDetails() {
 
   const systemEntriesAsArray = Object.entries(system.fields);
 
-  console.log(system);
+  // console.log(system);
 
   return (
     <div>

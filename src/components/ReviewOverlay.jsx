@@ -23,7 +23,17 @@ export default function ReviewOverlay(props) {
 
   return (
     <div>
-      <form className="overlay" onSubmit={handleSubmit}>
+      <form
+        className="overlay"
+        onSubmit={(e) => {
+          if (name) {
+            handleSubmit(e);
+          } else {
+            e.preventDefault();
+            e.target[0].placeholder = "Please include your name!";
+          }
+        }}
+      >
         <input
           className="full-name"
           type="text"

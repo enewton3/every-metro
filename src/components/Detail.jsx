@@ -85,12 +85,17 @@ export default function Detail(props) {
         </p>
       );
     } else if (key === "TransitMap") {
-      console.log(value);
+      // console.log(value);
       return (
         <p className="detail list">
           <strong>{newKey}: </strong>
           {value.map((item, index) => (
-            <a href={value[index].url} target="_blank" rel="noreferrer">
+            <a
+              key={`${index}, ${item}`}
+              href={value[index].url}
+              target="_blank"
+              rel="noreferrer"
+            >
               here
             </a>
           ))}

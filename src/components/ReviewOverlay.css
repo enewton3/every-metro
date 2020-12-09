@@ -22,19 +22,14 @@
 .full-name {
   grid-area: name;
   margin: 3px;
-  /* height: 25%; */
-  /* align-self: flex-start; */
 }
 
 .content {
   grid-area: content;
   margin: 3px;
-  /* height: 65%;
-  width: 95%; */
 }
 
 .submit {
   grid-area: button;
   margin: 3px;
-  /* height: 25%; */
 }
