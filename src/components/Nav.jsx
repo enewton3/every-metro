@@ -12,10 +12,16 @@ class Nav extends Component {
       burgerToggle: false,
       windowWidth: window.innerWidth,
     };
+    this.handleResize = this.handleResize.bind(this);
   }
 
   handleResize() {
-    this.setState({ windowWidth: window.innerWidth });
+    this.setState(() => ({
+      windowWidth: window.innerWidth,
+    }));
+    if (this.state.windowWidth > 1020) {
+      this.setState({ burgerToggle: true });
+    }
   }
 
   componentDidMount() {

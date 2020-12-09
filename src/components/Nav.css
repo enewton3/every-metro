@@ -13,7 +13,6 @@
   align-self: flex-start;
 }
 .link-list {
-  transition: all 1s linear;
   margin: 0;
   position: absolute;
   right: 0;
@@ -25,7 +24,6 @@
   align-items: center;
   padding: 0;
   max-width: 80%;
-  /* border: 2px solid black; */
 }
 
 .nav-link {
@@ -44,7 +42,7 @@
 
 @media (max-width: 1024px) {
   .link-list {
-    display: none;
+    display: flex;
     border: 2px solid black;
     flex-flow: column wrap;
     top: 30px;
@@ -56,4 +54,19 @@
 }
 
 @media (max-width: 500px) {
+  .nav-title {
+    margin-left: 2px;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .hamburger {
+    width: 20px;
+    height: 20px;
+  }
+
+  .link-list {
+    top: 20px;
+    font-size: 0.75rem;
+  }
 }

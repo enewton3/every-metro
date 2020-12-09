@@ -15,17 +15,25 @@
   display: flex;
 }
 
-.footer > div > img {
-  display: inline-block;
-}
-
 .footer > div > p {
   margin: 5px 0 5px 0;
 }
 
 .socialIcon {
+  display: inline-block;
   height: 30px;
   width: 30px;
   align-self: center;
   margin: 0 10px 0 10px;
+}
+
+@media (max-width: 1024px) {
+}
+@media (max-width: 500px) {
+  .ga {
+    display: none;
+  }
+  .copyright {
+    align-self: center;
+  }
 }

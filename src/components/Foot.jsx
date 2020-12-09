@@ -9,10 +9,10 @@ export default function Foot() {
         <a href="https://www.facebook.com/everymetro">
           <img className="socialIcon" src={fbico} alt="facebook icon" />
         </a>
-        <p>
-          Built for General Assembly Software Engineering Immersive <br />© Evyn
-          Newton 2020
+        <p className="ga">
+          Built for General Assembly Software Engineering Immersive{" "}
         </p>
+        <p className="copyright">© Evyn Newton 2020</p>
         <a href="https://www.instagram.com/everymetrointheworld/">
           <img className="socialIcon" src={igico} alt="instagram icon" />
         </a>
