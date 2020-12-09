@@ -5,12 +5,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  flex-flow: row wrap;
-  align-items: flex-end;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
 }
 
 #theText {
-  margin: 300px auto 0 auto;
+  margin: 0 auto;
   color: #edcb96;
   font-size: 1.5rem;
   text-shadow: 2px 2px black;
@@ -18,7 +18,7 @@
 
 #goHome,
 #goHome > h4 {
-  margin: 0 auto 75px auto;
+  margin: 0 auto 25px auto;
   text-shadow: 2px 2px black;
 }
 
