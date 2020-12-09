@@ -13,6 +13,7 @@
   align-self: flex-start;
 }
 .link-list {
+  transition: all 1s linear;
   margin: 0;
   position: absolute;
   right: 0;
@@ -30,4 +31,29 @@
 .nav-link {
   margin: 10px;
   text-decoration: none;
+}
+
+.hamburger {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .link-list {
+    display: none;
+    border: 2px solid black;
+    flex-flow: column wrap;
+    top: 30px;
+    background-color: #3b60e4;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
 }
