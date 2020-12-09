@@ -6,14 +6,14 @@ export default function Foot() {
   return (
     <div className="footer">
       <div>
-        <a href="https://www.facebook.com/everymetro">
+        <a id="fb" href="https://www.facebook.com/everymetro">
           <img className="socialIcon" src={fbico} alt="facebook icon" />
         </a>
         <p className="ga">
-          Built for General Assembly Software Engineering Immersive{" "}
+          Built for General Assembly Software Engineering Immersive
         </p>
         <p className="copyright">© Evyn Newton 2020</p>
-        <a href="https://www.instagram.com/everymetrointheworld/">
+        <a id="ig" href="https://www.instagram.com/everymetrointheworld/">
           <img className="socialIcon" src={igico} alt="instagram icon" />
         </a>
       </div>

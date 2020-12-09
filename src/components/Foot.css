@@ -12,19 +12,41 @@
 
 .footer > div {
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-areas:
+    "fb sei ig"
+    "fb copy ig";
 }
 
-.footer > div > p {
-  margin: 5px 0 5px 0;
+.ga {
+  grid-area: sei;
+  margin: 0;
+}
+
+.copyright {
+  grid-area: copy;
+  margin: 0;
 }
 
 .socialIcon {
-  display: inline-block;
+  /* display: inline-block; */
   height: 30px;
   width: 30px;
   align-self: center;
-  margin: 0 10px 0 10px;
+  margin: 2px;
+}
+
+#fb {
+  grid-area: fb;
+  margin: 0;
+  height: 30px;
+  width: 30px;
+}
+#ig {
+  grid-area: ig;
+  margin: 0;
+  height: 30px;
+  width: 30px;
 }
 
 @media (max-width: 1024px) {
@@ -35,5 +57,9 @@
   }
   .copyright {
     align-self: center;
+    margin: 0px 10px 0px 10px;
+  }
+  .footer > div {
+    grid-template-areas: "fb copy ig";
   }
 }
