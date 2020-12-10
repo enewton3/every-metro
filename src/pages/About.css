@@ -1,0 +1,53 @@
+.about-img {
+  width: 100vw;
+  height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+}
+
+.about-title {
+  margin: 0 0 25px 25px;
+  color: #edcb96;
+  font-size: 3rem;
+  text-shadow: 2px 2px grey;
+}
+
+.about-section {
+  text-align: left;
+  display: grid;
+  grid-template-areas:
+    "us img"
+    "site img"
+    "social img";
+}
+.us-about > h2,
+.site-about > h2,
+.us-about > p,
+.site-about > p,
+.social > h3 {
+  margin: 0;
+}
+.us-about {
+  grid-area: us;
+  margin: 20px;
+}
+
+.site-about {
+  grid-area: site;
+  margin: 20px;
+}
+
+.social {
+  grid-area: social;
+  margin: 20px;
+}
+
+#evyn-and-ali {
+  grid-area: img;
+  width: 300px;
+  margin: 25px;
+}
