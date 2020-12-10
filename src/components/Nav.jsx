@@ -9,18 +9,20 @@ class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      navToggle: true,
       burgerToggle: false,
-      windowWidth: window.innerWidth,
     };
     this.handleResize = this.handleResize.bind(this);
   }
 
   handleResize() {
-    this.setState(() => ({
-      windowWidth: window.innerWidth,
-    }));
-    if (this.state.windowWidth > 1020) {
-      this.setState({ burgerToggle: true });
+    if (window.innerWidth > 1020) {
+      this.setState({
+        burgerToggle: false,
+        navToggle: true,
+      });
+    } else if (window.innerWidth <= 1020) {
+      this.setState({ navToggle: false });
     }
   }
 
@@ -33,6 +35,9 @@ class Nav extends Component {
     window.addEventListener("resize", this.handleResize);
   }
 
+  //if >1020 navToggle is true
+  //if < 1020 navToggle is false
+
   render() {
     return (
       <div className="nav">
@@ -42,7 +47,9 @@ class Nav extends Component {
         <ul
           className="link-list"
           style={
-            this.state.burgerToggle ? { display: "flex" } : { display: "none" }
+            this.state.navToggle || this.state.burgerToggle
+              ? { display: "flex" }
+              : { display: "none" }
           }
         >
           <li>
@@ -82,19 +89,5 @@ class Nav extends Component {
     );
   }
 }
-
-// export default function Nav() {
-//   const [burgerToggle, setBurgerToggle] = useState(false);
-//   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-//   window.addEventListener("resize", setWindowWidth(window.innerWidth));
-
-//   useEffect(() => {
-//     console.log(windowWidth);
-//     console.log(window.innerWidth);
-//   }, [burgerToggle]);
-
-//   );
-// }
 
 export default Nav;

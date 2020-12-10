@@ -9,6 +9,7 @@ import Foot from "./components/Foot";
 import Wrong from "./pages/Wrong";
 import ContributeLanding from "./pages/ContributeLanding";
 import Contribute from "./pages/Contribute";
+import ScrolltoTop from "./components/ScrolltoTop";
 
 import "./App.css";
 
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <header>
         <Nav />
+        <ScrolltoTop />
       </header>
       <main>
         <Switch>

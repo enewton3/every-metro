@@ -37,6 +37,7 @@ export default function SystemDetails() {
       Notes: "",
     },
   });
+
   const [reviews, setReviews] = useState([]);
   const [overlayToggle, setOverlayToggle] = useState(false);
 
@@ -85,8 +86,6 @@ export default function SystemDetails() {
   let headerImage = system.fields.image ? system.fields.image : detailsimg;
 
   const systemEntriesAsArray = Object.entries(system.fields);
-  // console.log(systemEntriesAsArray);
-  // console.log(system);
 
   return (
     <div>

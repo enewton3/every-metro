@@ -1,11 +1,9 @@
-import React from "react";
+import TypeAhead from "../components/TypeAhead";
 
 export default function ContributeLanding() {
   return (
     <div>
-      <h1>
-        This will be the Contribute Landing Div with a search bar/dropdown menus
-      </h1>
+      <h1>{/* <TypeAhead source={systems} /> */}</h1>
     </div>
   );
 }

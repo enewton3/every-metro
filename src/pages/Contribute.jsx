@@ -9,7 +9,7 @@ import { baseURL, config } from "../services";
 //pushes edits to the contribute table
 
 export default function Contribute() {
-  const [system, setSystem] = useState([]);
+  const [system, setSystem] = useState({});
   const params = useParams();
 
   const fields = {
@@ -36,7 +36,7 @@ export default function Contribute() {
     MetroCardName: "Metro Card Name",
     TransitMuseum: false,
     Notes: "Any other Notes?",
-    logo: "Operator Logo URL",
+    Logo: "Operator Logo URL",
     OperatorWebsite: "Operator Website URL",
     Metro_Systems: null,
   };
@@ -47,7 +47,15 @@ export default function Contribute() {
       try {
         let response = await axios.get(recordURL, config);
         console.log(response);
-        setSystem(response.data);
+        setSystem({
+          ...response.data,
+          fields: {
+            ...fields,
+            ...response.data.fields,
+          },
+        });
+        console.log(fields);
+        console.log(system);
       } catch (error) {
         console.log(error);
       }
@@ -65,10 +73,34 @@ export default function Contribute() {
     }
   };
 
+  const systemKeysAsArray = Object.keys(fields);
+
+  console.log(systemKeysAsArray);
+  const getBetterKeyNames = systemKeysAsArray.map((key) => {
+    // Thanks Soleil for the following reduce!
+    // take each character of the key and let's do something with it
+    const words = key.split("").reduce((a, cha, i) => {
+      // if the current letter is a capital letter, it signifies the beginning of a word
+      if (cha === cha.toUpperCase()) {
+        // to create a new word, we add a new element at the end of the array to append our lowercase letters to
+        a.push(cha);
+        // if the current key is a lowercase letter, it is just part of a word
+      } else {
+        // so add it to the current word
+        a[a.length - 1] += cha;
+      }
+      return a;
+    }, []);
+    let detailName = words.join(" ");
+    return detailName;
+  });
+
   return (
     <div>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <input />
+        {/* {system.fields.map((item) => (
+          <input />
+        ))} */}
         <button type="submit">Submit</button>
       </form>
     </div>

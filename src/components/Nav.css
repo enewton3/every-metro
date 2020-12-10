@@ -40,7 +40,7 @@
   display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1020px) {
   .link-list {
     display: flex;
     border: 2px solid black;
