@@ -1,0 +1,15 @@
+.contribute {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.label-input {
+  display: flex;
+  flex-flow: column no wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.label-input > label {
+  text-align: right;
+}
