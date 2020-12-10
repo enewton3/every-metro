@@ -1,8 +1,8 @@
 // import axios from "axios";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 export default function Contribute() {
-  const params = useParams();
+  // const params = useParams();
 
   return (
     <div>
