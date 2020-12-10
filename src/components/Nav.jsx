@@ -56,7 +56,7 @@ class Nav extends Component {
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/search">
+            <Link className="nav-link" to="/contribute">
               Contribute Data
             </Link>
           </li>

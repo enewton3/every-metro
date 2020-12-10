@@ -85,8 +85,8 @@ export default function SystemDetails() {
   let headerImage = system.fields.image ? system.fields.image : detailsimg;
 
   const systemEntriesAsArray = Object.entries(system.fields);
-  console.log(systemEntriesAsArray);
-  console.log(system);
+  // console.log(systemEntriesAsArray);
+  // console.log(system);
 
   return (
     <div>
