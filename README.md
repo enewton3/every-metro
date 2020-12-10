@@ -57,7 +57,7 @@ id: "rec1mRM5ocUOicW1u"
 
 #### PostMVP
 
-- users can contribute to the data via an input form
+- users can contribute to the data via an input form (contribute landing page similar to search?)
 - incorporate visited table from API so users can see previos Every Metro trips
 - incorporate light rail/trams table into all of the above
 - linking between systems and their light rail systems / other systems in the same city
