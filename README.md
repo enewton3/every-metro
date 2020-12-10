@@ -69,9 +69,9 @@ id: "rec1mRM5ocUOicW1u"
 | December 3  | Prompt / Wireframes / Priority Matrix / Timeframes | Complete   |
 | December 4  | Project Approval                                   | Complete   |
 | December 6  | Core Application Structure (HTML, CSS, etc.)       | Complete   |
-| December 7  | Pseudocode / actual code                           | Incomplete |
-| December 8  | Initial Clickable Model                            | Incomplete |
-| December 9  | MVP                                                | Incomplete |
+| December 7  | Pseudocode / actual code                           | Complete   |
+| December 8  | Initial Clickable Model                            | Complete   |
+| December 9  | MVP                                                | Complete   |
 | December 11 | Presentations                                      | Incomplete |
 
 ## Timeframes
@@ -97,8 +97,8 @@ id: "rec1mRM5ocUOicW1u"
 | Responsive Styling             |    M     |      3hrs      |     3hrs      |    0hrs     |
 | About Page                     |    M     |      1hrs      |     1hrs      |    0hrs     |
 | About Page Styling             |    M     |      1hrs      |     1hrs      |    0hrs     |
-| Contribute Page                |    M     |      1hrs      |     0hrs      |    0hrs     |
-| Contribute Page Functionality  |    M     |      2hrs      |     0hrs      |    0hrs     |
+| Contribute Page                |    M     |      1hrs      |     1hrs      |    0hrs     |
+| Contribute Page Functionality  |    M     |      2hrs      |     .5hrs     |    0hrs     |
 | Contribute Page Styling        |    M     |      1hrs      |     0hrs      |    0hrs     |
 | Tracking Page                  |    L     |      2hrs      |     0hrs      |    0hrs     |
 | Tracking Page Styling          |    L     |      2hrs      |     0hrs      |    0hrs     |
