@@ -81,7 +81,7 @@ id: "rec1mRM5ocUOicW1u"
 | Wireframes and Pitch           |    H     |      2hrs      |     2hrs      |    2hrs     |
 | Base React App                 |    H     |      2hrs      |     2hrs      |    2hrs     |
 | Home Page                      |    H     |      2hrs      |     1hrs      |    1hrs     |
-| Home Page Styling              |    H     |      2hrs      |    1.5hrs     |   1.5hrs    |
+| Home Page Styling              |    H     |      2hrs      |     2hrs      |    2hrs     |
 | Nav                            |    H     |      1hrs      |     1hrs      |    1hrs     |
 | Nav Styling                    |    H     |      1hrs      |     3hrs      |    3hrs     |
 | Search Page                    |    H     |      2hrs      |     2hrs      |    2hrs     |
@@ -103,7 +103,7 @@ id: "rec1mRM5ocUOicW1u"
 | Tracking Page                  |    L     |      2hrs      |     0hrs      |    0hrs     |
 | Tracking Page Styling          |    L     |      2hrs      |     0hrs      |    0hrs     |
 | Incorporate Light Rail Systems |    L     |      3hrs      |     0hrs      |    0hrs     |
-| Total                          |    H     |     42hrs      |    47.5hrs    |   47.5hrs   |
+| Total                          |    H     |     42hrs      |     48hrs     |    48hrs    |
 
 ## SWOT Analysis
 
