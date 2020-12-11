@@ -67,11 +67,11 @@ export default function Contribute() {
     Metro_Systems: [`${params.id}`],
   };
 
-  const catchNonTextAndExtra = (obj) => {
-    //go through the objects keys and make sure they are what we want to be sending
-    //then go through the objects values and make sure they are all strings
-    //return a new object
-  };
+  // const catchNonTextAndExtra = (obj) => {
+  //   //go through the objects keys and make sure they are what we want to be sending
+  //   //then go through the objects values and make sure they are all strings
+  //   //return a new object
+  // };
 
   useEffect(() => {
     const getSystem = async () => {
@@ -128,9 +128,6 @@ export default function Contribute() {
     let detailName = words.join(" ");
     return detailName;
   });
-  console.log(system);
-  console.log(system.fields);
-  console.log(systemValuesAsArray);
   return (
     <div>
       <div
