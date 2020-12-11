@@ -79,31 +79,31 @@ id: "rec1mRM5ocUOicW1u"
 | Component                      | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------ | :------: | :------------: | :-----------: | :---------: |
 | Wireframes and Pitch           |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Base React App                 |    H     |      2hrs      |     2hrs      |    0hrs     |
-| Home Page                      |    H     |      2hrs      |     1hrs      |    0hrs     |
-| Home Page Styling              |    H     |      2hrs      |    1.5hrs     |    0hrs     |
-| Nav                            |    H     |      1hrs      |     1hrs      |    0hrs     |
-| Nav Styling                    |    H     |      1hrs      |     3hrs      |    0hrs     |
-| Search Page                    |    H     |      2hrs      |     2hrs      |    0hrs     |
-| Search Functionality           |    H     |      2hrs      |     2hrs      |    0hrs     |
-| Search Page Styling            |    H     |      2hrs      |     2hrs      |    0hrs     |
-| System Card                    |    H     |      2hrs      |     1hrs      |    0hrs     |
-| System Card Styling            |    H     |      1hrs      |    2.5hrs     |    0hrs     |
-| System Details Page            |    H     |      3hrs      |     7hrs      |    0hrs     |
-| System Details Styling         |    H     |      2hrs      |     3hrs      |    0hrs     |
-| Reviews Components             |    H     |      2hrs      |     2hrs      |    0hrs     |
-| Reviews Stylings               |    H     |      2hrs      |     2hrs      |    0hrs     |
-| Add A review                   |    H     |      2hrs      |     2hrs      |    0hrs     |
-| Responsive Styling             |    M     |      3hrs      |     3hrs      |    0hrs     |
-| About Page                     |    M     |      1hrs      |     1hrs      |    0hrs     |
-| About Page Styling             |    M     |      1hrs      |     1hrs      |    0hrs     |
-| Contribute Page                |    M     |      1hrs      |     1hrs      |    0hrs     |
-| Contribute Page Functionality  |    M     |      2hrs      |     .5hrs     |    0hrs     |
-| Contribute Page Styling        |    M     |      1hrs      |     0hrs      |    0hrs     |
+| Base React App                 |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Home Page                      |    H     |      2hrs      |     1hrs      |    1hrs     |
+| Home Page Styling              |    H     |      2hrs      |    1.5hrs     |   1.5hrs    |
+| Nav                            |    H     |      1hrs      |     1hrs      |    1hrs     |
+| Nav Styling                    |    H     |      1hrs      |     3hrs      |    3hrs     |
+| Search Page                    |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Search Functionality           |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Search Page Styling            |    H     |      2hrs      |     2hrs      |    2hrs     |
+| System Card                    |    H     |      2hrs      |     1hrs      |    1hrs     |
+| System Card Styling            |    H     |      1hrs      |    2.5hrs     |   2.5hrs    |
+| System Details Page            |    H     |      3hrs      |     7hrs      |    7hrs     |
+| System Details Styling         |    H     |      2hrs      |     3hrs      |    3hrs     |
+| Reviews Components             |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Reviews Stylings               |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Add A review                   |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Responsive Styling             |    M     |      3hrs      |     3hrs      |    3hrs     |
+| About Page                     |    M     |      1hrs      |     1hrs      |    1hrs     |
+| About Page Styling             |    M     |      1hrs      |     1hrs      |    1hrs     |
+| Contribute Page                |    M     |      1hrs      |     1hrs      |    1hrs     |
+| Contribute Page Functionality  |    M     |      2hrs      |     4hrs      |    4hrs     |
+| Contribute Page Styling        |    M     |      1hrs      |    1.5hrs     |   1.5hrs    |
 | Tracking Page                  |    L     |      2hrs      |     0hrs      |    0hrs     |
 | Tracking Page Styling          |    L     |      2hrs      |     0hrs      |    0hrs     |
 | Incorporate Light Rail Systems |    L     |      3hrs      |     0hrs      |    0hrs     |
-| Total                          |    H     |     42hrs      |     39hrs     |    0hrs     |
+| Total                          |    H     |     42hrs      |    47.5hrs    |   47.5hrs   |
 
 ## SWOT Analysis
 

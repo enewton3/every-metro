@@ -7,7 +7,7 @@ import Track from "./pages/Track";
 import SystemDetails from "./pages/SystemDetails";
 import Foot from "./components/Foot";
 import Wrong from "./pages/Wrong";
-import ContributeLanding from "./pages/ContributeLanding";
+import Thanks from "./pages/Thanks";
 import Contribute from "./pages/Contribute";
 import ScrolltoTop from "./components/ScrolltoTop";
 
@@ -37,8 +37,8 @@ function App() {
           <Route path="/details/:id">
             <SystemDetails />
           </Route>
-          <Route exact path="/contribute">
-            <ContributeLanding />
+          <Route exact path="/thanks">
+            <Thanks />
           </Route>
           <Route path="/contribute/:id">
             <Contribute />

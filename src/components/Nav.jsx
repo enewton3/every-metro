@@ -62,11 +62,11 @@ class Nav extends Component {
               Track Every Metro
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link className="nav-link" to="/contribute">
               Contribute Data
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link className="nav-link" to="/about">
               About

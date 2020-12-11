@@ -47,3 +47,9 @@ a:active {
 a:hover {
   color: #edcb96;
 }
+
+@media (max-width: 500px) {
+  main {
+    padding: 0px 0 0 0;
+  }
+}

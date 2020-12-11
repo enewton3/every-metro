@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { baseURL, config } from "../services";
+import contributeimg from "../images/contribute.jpg";
 import "./Contribute.css";
 
 //gets ID of linked system from params,
@@ -11,6 +12,7 @@ import "./Contribute.css";
 
 export default function Contribute() {
   const params = useParams();
+  const history = useHistory();
   const [system, setSystem] = useState({
     fields: {
       City: "City",
@@ -98,6 +100,7 @@ export default function Contribute() {
     } catch (error) {
       console.log(error);
     }
+    history.push("/thanks");
   };
 
   const handleInputChange = (e) => {
@@ -130,6 +133,14 @@ export default function Contribute() {
   console.log(systemValuesAsArray);
   return (
     <div>
+      <div
+        id="contribute-img"
+        style={{ backgroundImage: `url(${contributeimg})` }}
+      >
+        <h3 className="contribute-head-smol">Edit Data for:</h3>
+        <h1 className="contribute-head">{system.fields.Name}</h1>
+      </div>
+
       <div className="contribute">
         <form onSubmit={(e) => handleSubmit(e)}>
           {systemKeysAsArray.map((item, index) => {
@@ -140,7 +151,8 @@ export default function Contribute() {
               item === "LightRailTrams" ||
               item === "MetroCardImage" ||
               item === "logo" ||
-              item === "reviews"
+              item === "reviews" ||
+              item === "contributions"
             ) {
               return null;
             } else {
