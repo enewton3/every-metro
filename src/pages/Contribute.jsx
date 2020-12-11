@@ -78,13 +78,13 @@ export default function Contribute() {
       let recordURL = `${baseURL}/Metro_Systems/${params.id}`;
       try {
         let response = await axios.get(recordURL, config);
-        setSystem({
+        setSystem((prevSystem) => ({
           ...response.data,
           fields: {
-            ...system.fields,
+            ...prevSystem.fields,
             ...response.data.fields,
           },
-        });
+        }));
       } catch (error) {
         console.log(error);
       }
