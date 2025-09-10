@@ -1,6 +1,6 @@
-import axios from "axios";
+// axios import removed
 import searchimg from "../images/search.jpg";
-import { baseURL, config } from "../services";
+import { getAllSystems } from "../services";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchDropdown from "../components/SearchDropdown";
@@ -32,16 +32,9 @@ function Search() {
   // All of the UseEffects...
   useEffect(() => {
     async function getSystems() {
-      let pageOneURL = `${baseURL}/Metro_Systems`;
       try {
-        let response = await axios.get(pageOneURL, config);
-        let offset = response.data.offset;
-        let pageTwoURL = `${baseURL}/Metro_Systems?offset=${offset}`;
-        let pageTwoResponse = await axios.get(pageTwoURL, config);
-        let pageOne = response.data.records;
-        let pageTwo = pageTwoResponse.data.records;
-        let concattedRecords = [...pageOne, ...pageTwo];
-        setSystems(concattedRecords);
+        let response = await getAllSystems();
+        setSystems(response);
       } catch (error) {
         console.log(error);
       }

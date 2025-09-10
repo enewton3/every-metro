@@ -1,7 +1,7 @@
-import axios from "axios";
+// axios import removed
 import { useEffect, useState } from "react";
-import { useParams, useHistory } from "react-router-dom";
-import { baseURL, config } from "../services";
+import { useParams, useNavigate } from "react-router-dom";
+import { contribute, getOneSystem } from "../services";
 import contributeimg from "../images/contribute.jpg";
 import "./Contribute.css";
 
@@ -12,7 +12,7 @@ import "./Contribute.css";
 
 export default function Contribute() {
   const params = useParams();
-  const history = useHistory();
+  const navigate = useNavigate();
   const [system, setSystem] = useState({
     fields: {
       City: "City",
@@ -75,9 +75,8 @@ export default function Contribute() {
 
   useEffect(() => {
     const getSystem = async () => {
-      let recordURL = `${baseURL}/Metro_Systems/${params.id}`;
       try {
-        let response = await axios.get(recordURL, config);
+        let response = await getOneSystem(params.id);
         setSystem((prevSystem) => ({
           ...response.data,
           fields: {
@@ -94,13 +93,12 @@ export default function Contribute() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const contributeURL = `${baseURL}/contribute`;
     try {
-      await axios.post(contributeURL, { fields }, config);
+      await contribute(fields);
     } catch (error) {
       console.log(error);
     }
-    history.push("/thanks");
+    navigate("/thanks");
   };
 
   const handleInputChange = (e) => {

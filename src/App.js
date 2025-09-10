@@ -1,4 +1,4 @@
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -21,32 +21,16 @@ function App() {
         <ScrolltoTop />
       </header>
       <main>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/tracker">
-            <Track />
-          </Route>
-          <Route path="/search">
-            <Search />
-          </Route>
-          <Route path="/details/:id">
-            <SystemDetails />
-          </Route>
-          <Route exact path="/thanks">
-            <Thanks />
-          </Route>
-          <Route path="/contribute/:id">
-            <Contribute />
-          </Route>
-          <Route path="/:404">
-            <Wrong />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/tracker" element={<Track />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/details/:id" element={<SystemDetails />} />
+          <Route path="/thanks" element={<Thanks />} />
+          <Route path="/contribute/:id" element={<Contribute />} />
+          <Route path="/:404" element={<Wrong />} />
+        </Routes>
       </main>
       <footer>
         <Foot />

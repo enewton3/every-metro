@@ -1,7 +1,7 @@
-import axios from "axios";
+// axios import removed
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { baseURL, config } from "../services";
+import { getOneSystem, getOneSystemReviews } from "../services";
 import "./SystemDetails.css";
 import detailsimg from "../images/details.jpg";
 import logoDefault from "../images/undergroundicon.png";
@@ -35,6 +35,7 @@ export default function SystemDetails() {
       Region: "",
       TransitMuseum: true,
       Notes: "",
+      image: "",
     },
   });
 
@@ -44,38 +45,10 @@ export default function SystemDetails() {
   const params = useParams();
 
   useEffect(() => {
-    async function getReviews() {
-      const url = `${baseURL}/reviews`;
-      try {
-        let response = await axios.get(url, config);
-        let records = response.data.records;
-        let systemReviews = records
-          .filter((item) => item.fields.Metro_Systems[0] === params.id)
-          .sort((a, b) => {
-            const first = new Date(a.fields.Created);
-            const second = new Date(b.fields.Created);
-            if (second > first) {
-              return 1;
-            } else if (first > second) {
-              return -1;
-            } else {
-              return 0;
-            }
-          });
-        setReviews(systemReviews);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    getReviews();
-  }, [overlayToggle, params.id]);
-
-  useEffect(() => {
     async function getSystem() {
-      const url = `${baseURL}/Metro_Systems/${params.id}`;
       try {
-        let response = await axios.get(url, config);
-        setSystem(response.data);
+        let response = await getOneSystem(params.id);
+        setSystem(response);
       } catch (error) {
         console.log(error);
       }
@@ -83,16 +56,43 @@ export default function SystemDetails() {
     getSystem();
   }, [params.id]);
 
-  let headerImage = system.fields.image ? system.fields.image : detailsimg;
-
-  const systemEntriesAsArray = Object.entries(system.fields);
+  // useEffect(() => {
+  //   async function getReviews() {
+  //     try {
+  //       let response = await getOneSystemReviews(params.id);
+  //       let records = response;
+  //       console.log(records);
+  //       let systemReviews = records
+  //         .filter((item) => item.fields.Metro_Systems[0] === params.id)
+  //         .sort((a, b) => {
+  //           const first = new Date(a.fields.Created);
+  //           const second = new Date(b.fields.Created);
+  //           if (second > first) {
+  //             return 1;
+  //           } else if (first > second) {
+  //             return -1;
+  //           } else {
+  //             return 0;
+  //           }
+  //         });
+  //       setReviews(systemReviews);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   }
+  //   getReviews();
+  // }, [overlayToggle, params.id]);
 
   return (
     <div>
       {/* Header */}
       <div
         className="header-img"
-        style={{ backgroundImage: `url(${headerImage})` }}
+        style={{
+          backgroundImage: `url(${
+            system.fields.image ? system.fields.image : detailsimg
+          })`,
+        }}
       >
         <h1 className="detail-head">{system.fields.Name}</h1>
       </div>
@@ -100,7 +100,7 @@ export default function SystemDetails() {
       <section className="system-details">
         <div className="detailsDiv">
           <h2 id="details-title">System Details</h2>
-          {systemEntriesAsArray.map((item) => (
+          {Object.entries(system.fields).map((item) => (
             <Detail key={item} detail={item} />
           ))}
         </div>
@@ -142,7 +142,7 @@ export default function SystemDetails() {
         </Link>
       </section>
 
-      {/* Review Section */}
+      {/* Review Section
       <section className="reviews-section">
         <h3 className="review-head">Reviews and Suggestions</h3>
         <button onClick={() => setOverlayToggle(!overlayToggle)}>
@@ -157,7 +157,7 @@ export default function SystemDetails() {
         ) : (
           false
         )}
-      </section>
+      </section> */}
     </div>
   );
 }

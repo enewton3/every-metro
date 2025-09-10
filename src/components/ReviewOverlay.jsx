@@ -1,7 +1,6 @@
-import axios from "axios";
 import { useState } from "react";
-import { baseURL, config } from "../services";
 import "./ReviewOverlay.css";
+import { addReview } from "../services";
 
 export default function ReviewOverlay(props) {
   const [name, setName] = useState("");
@@ -16,8 +15,7 @@ export default function ReviewOverlay(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const reviewsURL = `${baseURL}/reviews`;
-    await axios.post(reviewsURL, { fields }, config);
+    await addReview(fields);
     props.setOverlayToggle((prev) => !prev);
   };
 

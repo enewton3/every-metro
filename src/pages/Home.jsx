@@ -4,7 +4,7 @@ import "./Home.css";
 
 export default function Home() {
   return (
-    <div>
+    <div className="home">
       <div
         className="home-header-img"
         style={{ backgroundImage: `url(${home})` }}
